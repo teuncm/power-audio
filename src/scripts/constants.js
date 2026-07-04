@@ -9,10 +9,10 @@ export const MIN_SEMITONES = -12
 export const MAX_SEMITONES = 12
 export const SEMITONE_STEP = 1
 
-// Volume boost feeds a limiter, so 1x remains neutral and higher values stay bounded.
-export const MIN_VOLUME_BOOST = 0
+// Volume boost starts at neutral gain and can drive louder material into the limiter.
+export const MIN_VOLUME_BOOST = 1
 export const DEFAULT_VOLUME_BOOST = 1
-export const MAX_VOLUME_BOOST = 2
+export const MAX_VOLUME_BOOST = 5
 export const VOLUME_BOOST_STEP = 0.01
 
 // Reverb defaults off; duration and wet mix only affect audio once enabled.
@@ -37,3 +37,4 @@ export const HIGH_PASS_FREQUENCY_LOG_STEP = 0.001
 // Offline export is chunked to keep memory use reasonable for long media files.
 export const EXPORT_CHUNK_SECONDS = 30
 export const EXPORT_BIT_DEPTH = 16
+

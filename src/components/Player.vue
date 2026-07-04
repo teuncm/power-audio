@@ -192,7 +192,7 @@ const {
       <label
         class="grid w-full grid-cols-1 items-center gap-2 text-center text-zinc-400 sm:grid-cols-[6rem_1fr_5rem] sm:gap-3 sm:text-left"
       >
-        <span class="text-sm font-extrabold text-zinc-100">Volume</span>
+        <span class="text-sm font-extrabold text-zinc-100">Volume boost</span>
         <input
           v-model.number="volumeBoost"
           class="w-full accent-emerald-400"

@@ -451,7 +451,7 @@ export function usePlayer() {
   }
 
   /**
-   * Reapplies output gain after the volume control changes.
+   * Reapplies output gain after the volume boost control changes.
    *
    * @returns {void}
    */
@@ -540,3 +540,4 @@ export function usePlayer() {
     wetMixStep: WET_MIX_STEP,
   }
 }
+
