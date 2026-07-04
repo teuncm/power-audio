@@ -30,8 +30,8 @@ export const DEFAULT_WET_MIX = 0.2
 // The high-pass slider stores logarithmic positions but exposes frequencies in hertz.
 export const DEFAULT_HIGH_PASS_ENABLED = false
 export const MIN_HIGH_PASS_FREQUENCY = 1
-export const MAX_HIGH_PASS_FREQUENCY = 1000
-export const DEFAULT_HIGH_PASS_FREQUENCY = 1000
+export const MAX_HIGH_PASS_FREQUENCY = 500
+export const DEFAULT_HIGH_PASS_FREQUENCY = 150
 export const HIGH_PASS_FREQUENCY_LOG_STEP = 0.001
 
 // Offline export is chunked to keep memory use reasonable for long media files.
