@@ -81,13 +81,13 @@ const {
     </p>
 
     <div
-      class="grid w-full max-w-xl gap-4 border-t border-zinc-800 pt-4"
+      class="grid w-full max-w-3xl gap-4 border-t border-zinc-800 pt-4"
       aria-label="Playback speed controls"
     >
       <label
-        class="grid w-full grid-cols-1 items-center gap-2 text-center text-zinc-400 sm:grid-cols-[6rem_1fr_5rem] sm:gap-3 sm:text-left"
+        class="grid w-full grid-cols-1 items-center gap-2 text-center text-zinc-400 sm:grid-cols-[8rem_1fr_6rem] sm:gap-3 sm:text-left"
       >
-        <span class="text-sm font-extrabold text-zinc-100">Speed</span>
+        <span class="text-sm font-extrabold text-zinc-100">Playback speed</span>
         <input
           v-model.number="playbackRate"
           class="w-full accent-rose-500"
@@ -102,7 +102,7 @@ const {
       </label>
 
       <label
-        class="grid w-full grid-cols-1 items-center justify-center gap-2 text-center text-zinc-400 sm:grid-cols-[6rem_8rem] sm:gap-3"
+        class="grid w-full grid-cols-1 items-center justify-center gap-2 text-center text-zinc-400 sm:grid-cols-[8rem_8rem] sm:gap-3"
       >
         <span class="text-sm font-extrabold text-zinc-100">Semitones</span>
         <input
@@ -118,11 +118,11 @@ const {
     </div>
 
     <div
-      class="grid w-full max-w-xl gap-4 border-t border-zinc-800 pt-4"
+      class="grid w-full max-w-3xl gap-4 border-t border-zinc-800 pt-4"
       aria-label="Effect and output controls"
     >
       <label
-        class="grid w-full grid-cols-1 items-center gap-2 text-center text-zinc-400 sm:grid-cols-[6rem_1fr_5rem] sm:gap-3 sm:text-left"
+        class="grid w-full grid-cols-1 items-center gap-2 text-center text-zinc-400 sm:grid-cols-[8rem_1fr_6rem] sm:gap-3 sm:text-left"
       >
         <span class="inline-flex items-center justify-center gap-2 text-sm font-extrabold text-zinc-100 sm:justify-start">
           <input
@@ -147,7 +147,7 @@ const {
       </label>
 
       <label
-        class="grid w-full grid-cols-1 items-center gap-2 text-center text-zinc-400 sm:grid-cols-[6rem_1fr_5rem] sm:gap-3 sm:text-left"
+        class="grid w-full grid-cols-1 items-center gap-2 text-center text-zinc-400 sm:grid-cols-[8rem_1fr_6rem] sm:gap-3 sm:text-left"
       >
         <span class="text-sm font-extrabold text-zinc-100">Dry/Wet</span>
         <input
@@ -165,7 +165,7 @@ const {
       </label>
 
       <label
-        class="grid w-full grid-cols-1 items-center gap-2 text-center text-zinc-400 sm:grid-cols-[6rem_1fr_5rem] sm:gap-3 sm:text-left"
+        class="grid w-full grid-cols-1 items-center gap-2 text-center text-zinc-400 sm:grid-cols-[8rem_1fr_6rem] sm:gap-3 sm:text-left"
       >
         <span class="inline-flex items-center justify-center gap-2 text-sm font-extrabold text-zinc-100 sm:justify-start">
           <input
@@ -190,7 +190,7 @@ const {
       </label>
 
       <label
-        class="grid w-full grid-cols-1 items-center gap-2 text-center text-zinc-400 sm:grid-cols-[6rem_1fr_5rem] sm:gap-3 sm:text-left"
+        class="grid w-full grid-cols-1 items-center gap-2 text-center text-zinc-400 sm:grid-cols-[8rem_1fr_6rem] sm:gap-3 sm:text-left"
       >
         <span class="text-sm font-extrabold text-zinc-100">Volume boost</span>
         <input
@@ -205,9 +205,16 @@ const {
           {{ volumeBoostLabel }}
         </strong>
       </label>
+
+      <div
+        class="grid w-full grid-cols-1 items-center gap-1 text-center text-zinc-400 sm:grid-cols-[8rem_1fr_6rem] sm:gap-3 sm:text-left"
+      >
+        <span class="text-sm font-extrabold text-zinc-100">Limiter</span>
+        <span class="text-sm sm:col-span-2">(always on)</span>
+      </div>
     </div>
 
-    <div class="grid w-full max-w-xl gap-3 border-t border-zinc-800 pt-4">
+    <div class="grid w-full max-w-3xl gap-3 border-t border-zinc-800 pt-4">
       <button
         class="min-h-11 rounded-lg border border-emerald-300 bg-emerald-400 px-4 font-extrabold text-zinc-950 transition hover:bg-emerald-300 disabled:cursor-wait disabled:border-zinc-700 disabled:bg-zinc-800 disabled:text-zinc-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300"
         type="button"
@@ -279,3 +286,5 @@ const {
     </label>
   </div>
 </template>
+
+

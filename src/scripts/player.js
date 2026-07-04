@@ -98,6 +98,25 @@ const minHighPassFrequencyLog = frequencyToLogValue(MIN_HIGH_PASS_FREQUENCY)
 const maxHighPassFrequencyLog = frequencyToLogValue(MAX_HIGH_PASS_FREQUENCY)
 
 /**
+ * Converts a high-pass slider position into a frequency, snapping the final step to max.
+ *
+ * @param {number} value - Logarithmic slider value from the high-pass range input.
+ * @returns {number} Clamped cutoff frequency in hertz.
+ */
+function highPassSliderValueToFrequency(value) {
+  // log10(500) does not align to the slider step, so the last reachable notch needs help.
+  if (value >= maxHighPassFrequencyLog - HIGH_PASS_FREQUENCY_LOG_STEP) {
+    return MAX_HIGH_PASS_FREQUENCY
+  }
+
+  return clamp(
+    logValueToFrequency(value),
+    MIN_HIGH_PASS_FREQUENCY,
+    MAX_HIGH_PASS_FREQUENCY,
+  )
+}
+
+/**
  * Provides playback, effects, and export state for the media player UI.
  *
  * @returns {object} Reactive controls and handlers consumed by Player.vue.
@@ -217,11 +236,7 @@ export function usePlayer() {
         return
       }
 
-      highPassFrequency.value = clamp(
-        logValueToFrequency(numericValue),
-        MIN_HIGH_PASS_FREQUENCY,
-        MAX_HIGH_PASS_FREQUENCY,
-      )
+      highPassFrequency.value = highPassSliderValueToFrequency(numericValue)
     },
   })
 
@@ -540,4 +555,5 @@ export function usePlayer() {
     wetMixStep: WET_MIX_STEP,
   }
 }
+
 
