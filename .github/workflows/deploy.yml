@@ -36,7 +36,6 @@ jobs:
         run: npm run build
         env:
           GITHUB_PAGES: 'true'
-          GITHUB_PAGES_CUSTOM_DOMAIN: 'true'
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -56,3 +55,4 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+
